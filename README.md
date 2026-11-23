@@ -1,18 +1,53 @@
-ill be updating istg
+# my-own-gpt
 
-the goal of this is to understand how llms work and actually build one (def wont be large)
+An implementation of a GPT (Generative Pre-trained Transformer) from first principles, written in Python using only NumPy.
 
-some stuff for me to remember later:
+## Objective
 
-- https://jalammar.github.io/illustrated-transformer/
+This project studies the internal mechanics of large language models by implementing each component by hand, without deep learning frameworks. The resulting model is intended for educational purposes and is deliberately small in scale.
 
-papers:
-- https://arxiv.org/abs/2005.14165
-- https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
-- https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
-- https://arxiv.org/abs/1706.03762
+## Project Structure
 
-videos n code:
-- https://www.youtube.com/watch?v=kCc8FmEb1nY
-- https://www.youtube.com/watch?v=3LWHYlmyqZ0&t=994s
-- https://github.com/karpathy/nanoGPT
+```text
+my-own-gpt/
+├── gpt.py                # Model entry point
+├── layers/               # Layer implementations
+│   ├── base.py           # GPTLayer abstract base class (forward / backward)
+│   ├── embedding.py      # Token embedding layer
+│   ├── softmax.py        # Numerically stable softmax
+│   └── cross_entropy.py  # Cross-entropy loss fused with softmax
+└── notes/                # Theoretical notes for each layer
+```
+
+## Implemented Components
+
+| Component | Implementation | Notes |
+| --- | --- | --- |
+| Embedding | [`layers/embedding.py`](layers/embedding.py) | [01-embedding.md](notes/01-embedding.md) |
+| Softmax | [`layers/softmax.py`](layers/softmax.py) | [02-softmax.md](notes/02-softmax.md) |
+| Cross-Entropy Loss | [`layers/cross_entropy.py`](layers/cross_entropy.py) | [03-cross-entropy.md](notes/03-cross-entropy.md) |
+
+Only forward passes are implemented at this stage; backward passes are pending.
+
+## References
+
+### Papers
+
+- Vaswani et al. (2017). *Attention Is All You Need*. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
+- Radford et al. (2018). *Improving Language Understanding by Generative Pre-Training*. [PDF](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- Radford et al. (2019). *Language Models are Unsupervised Multitask Learners*. [PDF](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- Brown et al. (2020). *Language Models are Few-Shot Learners*. [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)
+
+### Articles
+
+- Alammar, J. *The Illustrated Transformer*. [jalammar.github.io](https://jalammar.github.io/illustrated-transformer/)
+
+### Videos and Code
+
+- Karpathy, A. *Let's build GPT: from scratch, in code, spelled out*. [YouTube](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- Green Code. *How to Build a GPT from Scratch*. [YouTube](https://www.youtube.com/watch?v=3LWHYlmyqZ0)
+- Karpathy, A. *nanoGPT*. [GitHub](https://github.com/karpathy/nanoGPT)
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE).
