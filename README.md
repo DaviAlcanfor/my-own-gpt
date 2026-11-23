@@ -6,19 +6,6 @@ An implementation of a GPT (Generative Pre-trained Transformer) from first princ
 
 This project studies the internal mechanics of large language models by implementing each component by hand, without deep learning frameworks. The resulting model is intended for educational purposes and is deliberately small in scale.
 
-## Project Structure
-
-```text
-my-own-gpt/
-├── gpt.py                # Model entry point
-├── layers/               # Layer implementations
-│   ├── base.py           # GPTLayer abstract base class (forward / backward)
-│   ├── embedding.py      # Token embedding layer
-│   ├── softmax.py        # Numerically stable softmax
-│   └── cross_entropy.py  # Cross-entropy loss fused with softmax
-└── notes/                # Theoretical notes for each layer
-```
-
 ## Implemented Components
 
 | Component | Implementation | Notes |
