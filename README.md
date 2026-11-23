@@ -8,6 +8,8 @@ This project studies the internal mechanics of large language models by implemen
 
 ## Implemented Components
 
+An overview of the full GPT architecture is available in [00-arquitetura-geral.md](notes/00-arquitetura-geral.md).
+
 | Component | Implementation | Notes |
 | --- | --- | --- |
 | Embedding | [`layers/embedding.py`](layers/embedding.py) | [01-embedding.md](notes/01-embedding.md) |
