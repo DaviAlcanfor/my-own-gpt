@@ -6,18 +6,6 @@ An implementation of a GPT (Generative Pre-trained Transformer) from first princ
 
 This project studies the internal mechanics of large language models by implementing each component by hand, without deep learning frameworks. The resulting model is intended for educational purposes and is deliberately small in scale.
 
-## Implemented Components
-
-An overview of the full GPT architecture is available in [arquitetura-geral.md](arquitetura-geral.md).
-
-| Component | Implementation |
-| --- | --- |
-| Embedding | [`layers/embedding.py`](layers/embedding.py) |
-| Softmax | [`layers/softmax.py`](layers/softmax.py) |
-| Cross-Entropy Loss | [`layers/cross_entropy.py`](layers/cross_entropy.py) |
-
-Only forward passes are implemented at this stage; backward passes are pending.
-
 ## References
 
 ### Papers
