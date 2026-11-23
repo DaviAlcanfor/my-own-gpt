@@ -8,13 +8,13 @@ This project studies the internal mechanics of large language models by implemen
 
 ## Implemented Components
 
-An overview of the full GPT architecture is available in [00-arquitetura-geral.md](notes/00-arquitetura-geral.md).
+An overview of the full GPT architecture is available in [arquitetura-geral.md](arquitetura-geral.md).
 
-| Component | Implementation | Notes |
-| --- | --- | --- |
-| Embedding | [`layers/embedding.py`](layers/embedding.py) | [01-embedding.md](notes/01-embedding.md) |
-| Softmax | [`layers/softmax.py`](layers/softmax.py) | [02-softmax.md](notes/02-softmax.md) |
-| Cross-Entropy Loss | [`layers/cross_entropy.py`](layers/cross_entropy.py) | [03-cross-entropy.md](notes/03-cross-entropy.md) |
+| Component | Implementation |
+| --- | --- |
+| Embedding | [`layers/embedding.py`](layers/embedding.py) |
+| Softmax | [`layers/softmax.py`](layers/softmax.py) |
+| Cross-Entropy Loss | [`layers/cross_entropy.py`](layers/cross_entropy.py) |
 
 Only forward passes are implemented at this stage; backward passes are pending.
 
